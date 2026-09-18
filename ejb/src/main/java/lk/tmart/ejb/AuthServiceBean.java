@@ -4,8 +4,6 @@ import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.NoResultException;
-import lk.tmart.core.model.User;
-import lk.tmart.core.model.UserRole;
 import lk.tmart.core.service.AuthServiceRemote;
 import lk.tmart.core.util.PasswordUtil;
 import lk.tmart.core.util.ValidationUtil;
