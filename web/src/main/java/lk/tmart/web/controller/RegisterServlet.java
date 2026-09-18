@@ -6,8 +6,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.tmart.core.dto.LoginResultDTO;
-import lk.tmart.core.dto.RegisterRequestDTO;
 import lk.tmart.core.service.AuthServiceRemote;
 
 import java.io.IOException;
