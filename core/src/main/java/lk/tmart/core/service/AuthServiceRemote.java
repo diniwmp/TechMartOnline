@@ -1,8 +1,6 @@
 package lk.tmart.core.service;
 
 import jakarta.ejb.Remote;
-import lk.tmart.core.dto.LoginResultDTO;
-import lk.tmart.core.dto.RegisterRequestDTO;
 
 /**
  * Remote business interface for authentication logic.
