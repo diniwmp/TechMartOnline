@@ -1,7 +1,6 @@
 package lk.tmart.ejb;
 
 import jakarta.ejb.Stateless;
-import lk.tmart.core.dto.UserDTO;
 import lk.tmart.core.service.UserService;
 
 import java.util.List;

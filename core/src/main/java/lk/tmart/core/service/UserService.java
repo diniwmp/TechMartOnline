@@ -1,7 +1,6 @@
 package lk.tmart.core.service;
 
 import jakarta.ejb.Remote;
-import lk.tmart.core.dto.UserDTO;
 
 import java.util.List;
 
