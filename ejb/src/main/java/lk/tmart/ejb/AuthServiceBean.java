@@ -5,8 +5,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.NoResultException;
 import lk.tmart.core.service.AuthServiceRemote;
-import lk.tmart.core.util.PasswordUtil;
-import lk.tmart.core.util.ValidationUtil;
 
 /**
  * Stateless Session Bean implementing authentication business logic.
