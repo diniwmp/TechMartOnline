@@ -5,7 +5,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lk.tmart.core.dto.UserDTO;
 import lk.tmart.core.service.UserService;
 
 import java.io.IOException;
