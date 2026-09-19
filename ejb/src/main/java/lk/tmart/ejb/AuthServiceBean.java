@@ -4,7 +4,6 @@ import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.NoResultException;
-import lk.tmart.core.service.AuthServiceRemote;
 
 /**
  * Stateless Session Bean implementing authentication business logic.
