@@ -6,26 +6,29 @@
 
     <persistence-unit name="techmart-pu" transaction-type="JTA">
 
-        <!-- This JNDI name must match the datasource you configure on
-             your application server (WildFly/Payara). See the deployment
-             guide for the exact CLI/admin-console commands. -->
+    
         <jta-data-source>jdbc/techMartOnline</jta-data-source>
 
         <class>lk.tmart.core.model.User</class>
         <class>lk.tmart.core.model.UserRole</class>
-        <class>lk.tmart.core.model.UserProfile</class>
+        <class>lk.tmart.core.model.Product</class>
+        <class>lk.tmart.core.model.Brand</class>
+        <class>lk.tmart.core.model.Stock</class>
+        <class>lk.tmart.core.model.Category</class>
+        <class>lk.tmart.core.model.Notification</class>
+        <class>lk.tmart.core.model.PerformanceLog</class>
+        <class>lk.tmart.core.model.Cart</class>
+        <class>lk.tmart.core.model.CartItem</class>
+        <class>lk.tmart.core.model.Order</class>
+        <class>lk.tmart.core.model.OrderItem</class>
+        <class>lk.tmart.core.model.Wishlist</class>
 
         <properties>
-            <!-- Set to 'update' during development so Hibernate creates/updates
-                 tables from your entities. Switch to 'validate' once your
-                 schema is stable, for the production/deployment NFR story. -->
+
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
 
-            <!-- Connection pool tuning  mention these numbers explicitly
-                 in your "Database integration with connection optimization"
-                 deliverable section. -->
             <property name="hibernate.connection.pool_size" value="20"/>
             <property name="hibernate.generate_statistics" value="true"/>
         </properties>
