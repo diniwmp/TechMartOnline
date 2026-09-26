@@ -1,0 +1,22 @@
+
+
+.alert {
+    max-width: 1100px;
+    margin: 16px auto 0;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.alert-success {
+    background: rgba(61, 220, 151, 0.12);
+    color: #1f9d68;
+    border: 1px solid rgba(61, 220, 151, 0.35);
+}
+
+.alert-error {
+    background: rgba(255, 92, 122, 0.12);
+    color: #c43352;
+    border: 1px solid rgba(255, 92, 122, 0.35);
+}
