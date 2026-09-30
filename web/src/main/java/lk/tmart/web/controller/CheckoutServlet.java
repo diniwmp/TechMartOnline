@@ -26,8 +26,8 @@ import java.util.List;
 public class CheckoutServlet extends HttpServlet {
 
 
-    private static final String MERCHANT_ID = "1224059";
-    private static final String MERCHANT_SECRET = "MjY4ODkxMjgyMjEzMDU5MTUyNTkzMTg4NzI0NjYwMzc4NzUzNTExMA==";
+    private static final String MERCHANT_ID = "";
+    private static final String MERCHANT_SECRET = "";
 
     @EJB
     private OrderServiceRemote orderService;
