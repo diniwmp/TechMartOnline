@@ -1,3 +1,4 @@
+
 package lk.tmart.web.controller;
 
 import jakarta.servlet.ServletException;
@@ -17,6 +18,8 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         if (session != null) {
+
+            CartConversationHelper.closeCartFor(session);
             session.invalidate();
         }
         resp.sendRedirect(req.getContextPath() + "/login");
