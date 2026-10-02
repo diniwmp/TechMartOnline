@@ -5,12 +5,12 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lk.tmart.core.dto.UserDTO;
 
 import java.io.IOException;
 
-
-@WebFilter(urlPatterns = {"/home/*", "/home", "/cart", "/wishlist", "/checkout/*", "/profile"})
-public class AuthFilter implements Filter {
+@WebFilter("/admin/*")
+public class AdminFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -20,10 +20,15 @@ public class AuthFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession(false);
 
-        boolean loggedIn = session != null && session.getAttribute("loggedInUser") != null;
+        UserDTO user = session != null ? (UserDTO) session.getAttribute("loggedInUser") : null;
 
-        if (!loggedIn) {
+        if (user == null) {
             resp.sendRedirect(req.getContextPath() + "/login");
+            return;
+        }
+
+        if (!"ADMIN".equalsIgnoreCase(user.getRoleName())) {
+            resp.sendRedirect(req.getContextPath() + "/home");
             return;
         }
 
