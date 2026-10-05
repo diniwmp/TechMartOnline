@@ -6,4 +6,6 @@ import jakarta.interceptor.InvocationContext;
 import lk.tmart.ejb.PerformanceLogWriter;
 
 public class interceptor {
+    @EJB
+    private PerformanceLogWriter logWriter;
 }
